@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Dr. Rishabh Kaushal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filters {
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .filter-group {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+    .filter-group label {
+      margin-right: 15px;
+      white-space: nowrap;
+    }
+    .filter-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .publications {
+      display: grid;
+      gap: 15px;
+    }
+    .publication {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    .tags {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (Same as index.html) -->
+  <header>
+    <div class="header-container">
+      <img src="pics/profile.jpg" alt="Profile Photo" class="profile-photo">
+      <div>
+        <h1>Dr. Rishabh Kaushal</h1>
+        <p>Associate Professor, Department of Information Technology</p>
+        <p>Indira Gandhi Delhi Technical University for Women (IGDTUW)</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="research.html">Research</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="students.html">Students</a>
+          <a href="personal.html">Personal</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Research Publications</h2>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-group">
+        <label for="typeFilter"><strong>Filter by Type:</strong></label>
+        <select id="typeFilter">
+          <option value="">All</option>
+          <option value="conference">Conference</option>
+          <option value="journal">Journal</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <strong>Filter by Topic:</strong>
+        <div class="filter-topics">
+          <label><input type="checkbox" value="computational-social-science" class="topic-checkbox"> Computational Social Science</label>
+          <label><input type="checkbox" value="generative-ai" class="topic-checkbox"> Generative AI</label>
+          <label><input type="checkbox" value="cybersecurity" class="topic-checkbox"> Cybersecurity</label>
+          <label><input type="checkbox" value="nlp" class="topic-checkbox"> NLP</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Publications List -->
+    <div class="publications" id="publicationsList">
+      <div class="publication" data-type="conference" data-topic="computational-social-science,cybersecurity">
+        <h3>Paper Title 1</h3>
+        <p>Authors: A, B, C</p>
+        <p><a href="#">[PDF Link]</a></p>
+        <p class="tags">Type: Conference | Topics: Computational Social Science, Cybersecurity</p>
+      </div>
+
+      <div class="publication" data-type="journal" data-topic="generative-ai,nlp">
+        <h3>Paper Title 2</h3>
+        <p>Authors: X, Y, Z</p>
+        <p><a href="#">[PDF Link]</a></p>
+        <p class="tags">Type: Journal | Topics: Generative AI, NLP</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="cybersecurity">
+        <h3>Paper Title 3</h3>
+        <p>Authors: M, N, O</p>
+        <p><a href="#">[PDF Link]</a></p>
+        <p class="tags">Type: Conference | Topic: Cybersecurity</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (Same as index.html) -->
+  <footer>
+    <p>© 2025 Dr. Rishabh Kaushal</p>
+  </footer>
+
+  <script>
+    const typeFilter = document.getElementById('typeFilter');
+    const topicCheckboxes = document.querySelectorAll('.topic-checkbox');
+    const publications = document.querySelectorAll('.publication');
+
+    function filterPublications() {
+      const typeValue = typeFilter.value;
+      const selectedTopics = Array.from(topicCheckboxes)
+                                  .filter(cb => cb.checked)
+                                  .map(cb => cb.value);
+
+      publications.forEach(pub => {
+        const matchesType = !typeValue || pub.dataset.type === typeValue;
+
+        const pubTopics = pub.dataset.topic.split(',').map(t => t.trim());
+        const matchesTopic = selectedTopics.length === 0 || selectedTopics.some(topic => pubTopics.includes(topic));
+
+        pub.classList.toggle('hidden', !(matchesType && matchesTopic));
+      });
+    }
+
+    typeFilter.addEventListener('change', filterPublications);
+    topicCheckboxes.forEach(cb => cb.addEventListener('change', filterPublications));
+  </script>
+
+</body>
+</html>
+
