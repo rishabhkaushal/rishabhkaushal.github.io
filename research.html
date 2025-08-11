@@ -6,49 +6,22 @@
   <title>Research - Dr. Rishabh Kaushal</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .filters {
-      margin: 20px 0;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .filter-group {
-      border: 1px solid #ddd;
-      padding: 10px;
-      border-radius: 6px;
-      background: #f9f9f9;
-    }
-    .filter-group label {
-      margin-right: 15px;
-      white-space: nowrap;
-    }
-    .filter-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .publications {
-      display: grid;
-      gap: 15px;
-    }
-    .publication {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-    .tags {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    .hidden {
-      display: none;
-    }
+    body { line-height: 1.3; }
+    .filters { margin: 15px 0; display: flex; gap: 15px; flex-wrap: wrap; }
+    .filter-group { border: 1px solid #ddd; padding: 8px; border-radius: 6px; background: #f9f9f9; }
+    .filter-topics { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-group label { margin-right: 10px; white-space: nowrap; }
+    .publications { display: grid; gap: 10px; }
+    .publication { border: 1px solid #ddd; padding: 10px; border-radius: 8px; background: #fafafa; }
+    .publication h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .publication p { margin: 2px 0; }
+    .tags { font-size: 0.85rem; color: #555; }
+    .hidden { display: none; }
   </style>
 </head>
 <body>
 
-  <!-- Header (Same as index.html) -->
+  <!-- Header (same as before) -->
   <header>
     <div class="header-container">
       <img src="pics/profile.jpg" alt="Profile Photo" class="profile-photo">
@@ -57,7 +30,7 @@
         <p>Associate Professor, Department of Information Technology</p>
         <p>Indira Gandhi Delhi Technical University for Women (IGDTUW)</p>
         <nav>
-          <a href="index.html">Home</a>
+           <a href="index.html">Home</a>
           <a href="profile.html">Profile</a>
           <a href="teaching.html">Teaching</a>
           <a href="research.html">Research</a>
@@ -81,9 +54,10 @@
           <option value="">All</option>
           <option value="conference">Conference</option>
           <option value="journal">Journal</option>
+          <option value="preprint">Preprint</option>
+          <option value="policy">Policy</option>
         </select>
       </div>
-
       <div class="filter-group">
         <strong>Filter by Topic:</strong>
         <div class="filter-topics">
@@ -91,36 +65,107 @@
           <label><input type="checkbox" value="generative-ai" class="topic-checkbox"> Generative AI</label>
           <label><input type="checkbox" value="cybersecurity" class="topic-checkbox"> Cybersecurity</label>
           <label><input type="checkbox" value="nlp" class="topic-checkbox"> NLP</label>
+          <label><input type="checkbox" value="ml" class="topic-checkbox"> Machine Learning</label>
+          <label><input type="checkbox" value="data-law-policy" class="topic-checkbox"> Data Law & Policy</label>
+          <label><input type="checkbox" value="health" class="topic-checkbox"> Health</label>
+          <label><input type="checkbox" value="remote-sensing" class="topic-checkbox"> Remote Sensing</label>
         </div>
       </div>
     </div>
 
     <!-- Publications List -->
     <div class="publications" id="publicationsList">
+
+      <!-- Preprint papers (linked via arXiv) -->
+      <div class="publication" data-type="preprint" data-topic="computational-social-science,nlp">
+        <h3><a href="https://aclanthology.org/anthology-files/pdf/woah/2025.woah-1.28.pdf" target="_blank">Towards Fairness Assessment of Dutch Hate Speech Detection (WOAH, ACL 2025)</a></h3>
+        <p>J Bauer, R Kaushal, T Bertaglia, A Iamnitchi</p>
+        <p class="tags">Type: Conference | Topics: Computational Social Science, NLP</p>
+      </div>
+
+      <div class="publication" data-type="preprint" data-topic="generative-ai,computational-social-science">
+        <h3><a href="https://arxiv.org/abs/2505.02858" target="_blank">Towards High-Fidelity Synthetic Multi-platform Social Media Datasets via Large Language Models (Under Review 2025)</a></h3>
+        <p>H Tari, N Sereiva, R Kaushal, T Bertaglia, A Iamnitchi</p>
+        <p class="tags">Type: Preprint | Topics: Generative AI, Computational Social Science</p>
+      </div>
+
+      <div class="publication" data-type="preprint" data-topic="data-law-policy,computational-social-science">
+        <h3><a href="https://arxiv.org/abs/2505.01122" target="_blank">The Great Data Standoff: Researchers vs. Platforms Under the Digital Services Act (2025)</a></h3>
+        <p>C Goanta, S Zannettou, R Kaushal, J van de Kerkhof, T Bertaglia, …</p>
+        <p class="tags">Type: Preprint | Topics: Data Law & Policy, Computational Social Science</p>
+      </div>
+
+      <!-- Other Publications -->
+      <div class="publication" data-type="conference" data-topic="ml,health">
+        <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-86193-2_15" target="_blank">Infant Mortality in India: Understanding the Problem Using Machine Learning (2025)</a></h3>
+        <p>V Sethi, R Kaushal</p>
+        <p class="tags">Type: Conference | Topics: Machine Learning, Health</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="computational-social-science">
+        <h3><a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003589273-37/temporal-analysis-indian-farmers-protests-twitter-comparative-insights-chinmay-chahar-rishabh-kaushal" target="_blank">Temporal Analysis of Indian Farmers' Protests on Twitter with Comparative Insights (2025)</a></h3>
+        <p>C Chahar, R Kaushal</p>
+        <p class="tags">Type: Conference | Topics: Computational Social Science</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="ml,health">
+        <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-86193-2_15" target="_blank">Infant Mortality in India: Understanding the Problem Using Machine Learning Lens (2024)</a></h3>
+        <p>V Sethi, R Kaushal</p>
+        <p class="tags">Type: Conference | Topics: Machine Learning, Health</p>
+      </div>
+
+      <div class="publication" data-type="policy" data-topic="data-law-policy">
+        <h3><a href="https://cris.maastrichtuniversity.nl/ws/portalfiles/portal/263841463/090166e515c1dbca_3_.pdf" target="_blank">Policy Brief for the European Commission’s Digital Services Act Delegated Act on Data Access Consultation (2024)</a></h3>
+        <p>J van de Kerkhof, T Annabell, C Goanta, A Iamnitchi, R Kaushal, …</p>
+        <p class="tags">Type: Policy | Topics: Data Law & Policy</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="generative-ai,computational-social-science">
+        <h3><a href="https://dl.acm.org/doi/10.1145/3648188.3675153" target="_blank">Leveraging GPT for the Generation of Multi-Platform Social Media Datasets for Research (2024)</a></h3>
+        <p>H Tari, M D Khan, J Rutten, D Othman, T Bertaglia, R Kaushal, A Iamnitchi</p>
+        <p class="tags">Type: Conference | Topics: Generative AI, Computational Social Science</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="data-law-policy,computational-social-science">
+        <h3><a href="https://dl.acm.org/doi/abs/10.1145/3630106.3658960" target="_blank">Automated Transparency: A Legal and Empirical Analysis of the Digital Services Act Transparency Database (2024)</a></h3>
+        <p>R Kaushal, J Van De Kerkhof, C Goanta, G Spanakis, A Iamnitchi</p>
+        <p class="tags">Type: Conference | Topics: Data Law & Policy, Computational Social Science</p>
+      </div>
+
+      <div class="publication" data-type="conference" data-topic="generative-ai,computational-social-science">
+        <h3><a href="https://ojs.aaai.org/index.php/ICWSM/article/view/31303" target="_blank"> InstaSynth: Opportunities and Challenges in Generating Synthetic Instagram Data with ChatGPT for Sponsored Content Detection (2024)</a></h3>
+        <p>T Bertaglia, L Heisig, R Kaushal, A Iamnitchi</p>
+        <p class="tags">Type: Conference | Topics: Generative AI, Computational Social Science</p>
+      </div>
+
       <div class="publication" data-type="conference" data-topic="computational-social-science,cybersecurity">
-        <h3>Paper Title 1</h3>
-        <p>Authors: A, B, C</p>
-        <p><a href="#">[PDF Link]</a></p>
+        <h3><a href="https://dl.acm.org/doi/abs/10.1145/3630744.3663612" target="_blank">Understanding Influence Operations via Images (2024)</a></h3>
+        <p>B Khetharpal, A Khanooja, A Verma, A Ankita, R Kaushal</p>
         <p class="tags">Type: Conference | Topics: Computational Social Science, Cybersecurity</p>
       </div>
 
-      <div class="publication" data-type="journal" data-topic="generative-ai,nlp">
-        <h3>Paper Title 2</h3>
-        <p>Authors: X, Y, Z</p>
-        <p><a href="#">[PDF Link]</a></p>
-        <p class="tags">Type: Journal | Topics: Generative AI, NLP</p>
+      <div class="publication" data-type="journal" data-topic="health">
+        <h3><a href="https://psycnet.apa.org/fulltext/2024-01328-001.html" target="_blank">Emotional Experiences and Psychological Well-being in 51 Countries during the COVID-19 Pandemic (2024)</a></h3>
+        <p>R Sun, A Balabanova, C J Bajada, Y Liu, M Kriuchok, S R Voolma, M Đurić, …</p>
+        <p class="tags">Type: Journal | Topics: Health</p>
       </div>
 
-      <div class="publication" data-type="conference" data-topic="cybersecurity">
-        <h3>Paper Title 3</h3>
-        <p>Authors: M, N, O</p>
-        <p><a href="#">[PDF Link]</a></p>
-        <p class="tags">Type: Conference | Topic: Cybersecurity</p>
+      <div class="publication" data-type="journal" data-topic="nlp">
+        <h3><a href="https://www.inderscienceonline.com/doi/abs/10.1504/IJIDS.2024.142636" target="_blank">A Novel SMS Spam Dataset and Bi-directional Transformer Based Short-text Representations for SMS Spam Detection (2024)</a></h3>
+        <p>S Maheshwari, S Aggarwal, R Kaushal</p>
+        <p class="tags">Type: Journal | Topics: NLP</p>
       </div>
+
+      <div class="publication" data-type="journal" data-topic="remote-sensing,ml">
+        <h3><a href="https://link.springer.com/article/10.1007/s11042-023-14705-6" target="_blank">A Novel Framework for Fine-grained Spatio-temporal Change Detection in Satellite Images (2024)</a></h3>
+        <p>R Agarwal, S Jindal, S Narain, R Kaushal, K Yadav</p>
+        <p class="tags">Type: Journal | Topics: Remote Sensing, Machine Learning</p>
+      </div>
+
     </div>
   </main>
 
-  <!-- Footer (Same as index.html) -->
+  <!-- Footer -->
   <footer>
     <p>© 2025 Dr. Rishabh Kaushal</p>
   </footer>
@@ -133,15 +178,14 @@
     function filterPublications() {
       const typeValue = typeFilter.value;
       const selectedTopics = Array.from(topicCheckboxes)
-                                  .filter(cb => cb.checked)
-                                  .map(cb => cb.value);
+                                .filter(cb => cb.checked)
+                                .map(cb => cb.value);
 
       publications.forEach(pub => {
         const matchesType = !typeValue || pub.dataset.type === typeValue;
-
         const pubTopics = pub.dataset.topic.split(',').map(t => t.trim());
-        const matchesTopic = selectedTopics.length === 0 || selectedTopics.some(topic => pubTopics.includes(topic));
-
+        const matchesTopic = selectedTopics.length === 0 ||
+          selectedTopics.some(topic => pubTopics.includes(topic));
         pub.classList.toggle('hidden', !(matchesType && matchesTopic));
       });
     }
@@ -152,4 +196,3 @@
 
 </body>
 </html>
-
