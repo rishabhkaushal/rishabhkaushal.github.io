@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops - Dr. Rishabh Kaushal</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Styles for slider & workshop nav -->
+  <style>
+  .workshop-title {
+  text-align: center;
+  padding: 15px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+.workshop-title h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #333;
+}
+    /* Horizontal nav bar styling */
+    .workshop-nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 15px;
+    }
+    .workshop-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .workshop-nav a:hover {
+      background-color: #666;
+    }
+
+    /* Simple slider styles */
+    .slider {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 100%;
+      display: block;
+    }
+    .slider-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .slider-nav button {
+      background: #555;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      margin: 0 3px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .slider-nav button:hover {
+      background: #333;
+    }
+
+    main section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    main section h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="pics/profile.jpg" alt="Profile Photo" class="profile-photo">
+      <div>
+        <h1>Dr. Rishabh Kaushal</h1>
+        <p>Associate Professor, Department of Information Technology</p>
+        <p>Indira Gandhi Delhi Technical University for Women (IGDTUW)</p>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="research.html">Research</a>
+          <a href="workshops.html">Workshops</a>
+          <a href="students.html">Students</a>
+          <a href="personal.html">Personal</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="workshop-title">
+  <h2> <font color="red">Project Development using Advanced C Programming<br>20 June - 7 July 2011</font></h2>
+  </div>
+
+  <!-- Workshop-specific nav -->
+  <nav class="workshop-nav">
+    <a href="#intro">Intro</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#projects">Projects</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="pics/workshops/IMG_4158.JPG" alt="Workshop Image 1">
+        <img src="pics/workshops/IMG_4254.JPG" alt="Workshop Image 2">
+        <img src="pics/workshops/IMG_4257.JPG" alt="Workshop Image 3">
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button onclick="prevSlide()">Prev</button>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <!-- Section placeholders -->
+    <section id="intro">
+      <h3>Introduction</h3>
+      <p>Department of Information Technology envisages as one of its goals to orient students towards solving challenging real world problems by leveraging the practical CS/IT skills learnt during their 4-Year B.Tech.(CS/IT) programmes. To realize this, the Academic Schemes have been designed such that students imbibe real world problem solving orientation by incorporating academic and/or industrial training during their Summer Break after the completion of Second [1] and Third [2] Year of their B.Tech.(CS/IT) programmes, respectively. However, despite this, it is often observed by prospective recruiters from the industry during placement drives that students lack practical problem solving skills. Consequently, students selected in core CS/IT companies (like Microsoft, Google, Yahoo, Amazon, etc. which offer a very high compensation pay packages and carries out product development and research which is intellectually stimulating) are far less than those selected in service based CS/IT companies (like TCS, Infosys, etc) [3]. This trend is disappointing because it neither resonates with the capabilities nor with the aspirations of the highly talented and meritorious cream of students who deservedly secure admission at one of the better known colleges at the town, IGIT. </p>
+
+   <p>After considerable deliberations and brain storming, it is observed that one of the reasons for such a situation is lack of focus on CS/IT skills (courses) in the First Year. There is only one CS/IT course namely Introduction to Computers in First Semester and Introduction to Programming in Second Semester during the First Year. Students are unable to appreciate the importance of these single CS/IT courses amidst 5-6 Non-CS/IT courses which are science (non-engineering) and non-mainstream based courses during First Year. The fact that there is no mandatory training during Summer Break at the end of First Year further alienates a student from these much needed skills at an early stage in their B.Tech.(CS/IT) programmes.
+   </p><p>
+Therefore, Department of Information Technology plans to organize first of its kind, a Training cum Workshop on “Project Development using Advanced C Programming” during the Summer Vacations for the interested students. The aim would be to bring back focus on CS/IT skills and draw student’s attention towards their primary goal as prospective software engineers i.e. to leverage CS/IT skills to solve real world problems.
+</p><p>
+    References:
+<br>[1] ETCS 359 Practical Training,
+    Source: <a href="http://ipu.ac.in/syllabus/affiliated/sybtechcse.htm" target="_blank">http://ipu.ac.in/syllabus/affiliated/sybtechcse.htm</a>
+<br>[2] ETIT 459 Practical Training,
+    Source: <a href="http://ipu.ac.in/syllabus/affiliated/sybtechit.htm" target="_blank">http://ipu.ac.in/syllabus/affiliated/sybtechit.htm</a>
+<br>[3] Placement Updates
+            Source: <a href="http://www.ipu.ac.in/igit/placement_update.html" target="_blank">http://www.ipu.ac.in/igit/placement_update.html</a>
+    </section>
+
+    <section id="objectives">
+      <h3>Objectives</h3>
+      <p>The Summer Training cum Workshop on “Project Development using Advanced C Programming” is aimed at inculcating an aptitude for programming. Such an aptitude shall propel a student in gaining deeper insights in various fields of computer science and information technology. A programming perspective thus obtained, shall bring an appreciation of intricate concepts that a student shall study in subsequent courses, thereby enjoying their stay in engineering programme. Needless to mention, such students with a genuine taste for seeing through solutions of real world problems through efficiently designed and implemented solutions through programming, are the most sought after by core CS/IT companies involved in intellectually stimulating research and product development.
+
+</p><p>
+The roadmap for building such an aptitude for programming is outlined below:-
+<ul>
+<li>Problem Solving Approach: Emphasis on algorithm development for solving a given problem, supplementing it with probable improvements.
+
+<li>Advanced Programming Techniques: Introducing advanced programming techniques to enable efficient, robust and timely solutions for real world problems.
+
+<li>Project Development: Solving a real world problems leveraging the problem solving skills and advanced programming techniques learnt so far.</p>
+   </ul> </p></section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <p>Description of projects:-
+      <br><u>Flowchart Generator:</u> Flowchart is pictorial representation of steps involved to solve a given problem. The general approach to solve a problem is to first write its algorithm or flowchart and then write code in a particular programming language. However, it is generally observed that programmers don’t follow this approach and write code directly without writing the flowchart or algorithm. As a result, it becomes difficult, at times, to understand the underlying problem solving logic in their program. The project aims to develop a tool called flowchart generator to generate a flowchart given a C program.
+
+<br><u>Sorting and Searching Simulations</u>: Sorting is a problem of arranging given information in an orderly fashion either in increasing or in decreasing manner. Information can be of any type – numerals, words in dictionary, telephone numbers in directory, etc. There are various methods for sorting namely insertion sort, selection sort, bubble sort, etc. Searching is a problem of locating a particular information in a given list of input information. There are many methods of searching namely linear, binary and hash based searching. The goal of the project is to simulate the behavior of some of these sorting and searching algorithms graphically so that they could be easily understood. Such an understanding will also help in appreciating some of the enhancements that could be proposed for these sorting and searching algorithms in various situations.
+
+<br><u>CPU Scheduling Simulator</u>: Modern day operating systems provide a multi-programming environment wherein more than on process is running in the computer. One of the functions of the operating system therefore is to schedule the execution sequence of these processes, in other words, decide which process be assigned to CPU for execution when. The goal of the project is to develop a tool called CPU Scheduler that simulates the task of scheduling processes to the CPU through a graphical interface. Various scheduling policies that need to be implemented are First Cum First Serve (FCFS), Shortest Job First (SJF), Round Robin (RR) and Priority Based (PB) scheduling.
+
+
+<br><u>Dynamic Memory Management Simulation</u>: Each process running on the modern day operating systems providing a multi-programming environment needs to be stored in main memory for it to be executed. Two schemes for managing memory among these processes exist namely static and dynamic. In static scheme, memory is divided into “fixed” partitions which are allocated to the requesting process. This scheme would result in wastage of memory in situation where process required less memory than the partition, a problem referred as internal fragmentation. Therefore, a dynamic scheme was proposed with no partitions and memory was assigned to the processes exactly as were required. However, in this scheme once a process would complete, the memory de-allocated by it would create a hole and as more processes would complete their execution more such holes will start getting created, eventually a situation will arise that although holes together can serve a requesting process but we can’t allocate contiguous memory since these holes are scattered, a situation which is called external fragmentation. To minimize this, various strategies exist as to how to allocate memory to the requesting process. The goal of the project is to develop a tool called The goal of the project is to develop a tool called dynamic memory management simulator that shall graphically depict the allocation of memory as and when new requesting process arrive. Various allocation policies that need to be implemented are First Fit, Best Fit, Worst Fit and Next Fit.
+
+<br><u>Page Replacement Simulator</u>: Paging is a very important feature of modern day operating system. As per this approach, a process (program under execution) is divided into fixed size blocks called pages and memory is also divided into fixed size blocks of same size as page, each memory block is called as frame. A page table is maintained which contains mapping information as to which page is allocated to which frame in memory. At some point of time, there is no free frame available in the memory which could be given to the requesting page and hence, some allocated page (and its corresponding) frame is to be picked up (referred as page fault) and allocated to the requesting page. Various strategies are possible as to which page is to be selected as victim namely First In First Out (FIFO), Optimal Page Replacement (OPR), Most Recently Used (MRU) and Least Recently Used (LRU).
+
+<br><u>Data Structure Simulations</u>: Data structures are one the fundamental building blocks which are used for organization of data for solving problems in an efficient manner. The goal of the project is to simulate the various operations (insertion, deletion, update, etc) on conventional data structures namely arrays, linked lists, stacks, queues, trees and graphs.
+
+<br><u>Memory Map Simulator</u>: As a program is run and its instructions begin executing, the memory spaces get reserved for storing information (local variables, arrays, pointers, structures, etc.). Both static and dynamic memory allocation and de-allocation needs to be considered. The goal of the project is to depict graphically the changes that happen in the memory as the program is getting executed. In order words, all allocations and de-allocations of memory are to be displayed as the program is run.
+    </section>
+
+    <section id="resources">
+      <h3>Resource Persons</h3>
+      <p>The Workshop on “Project Development using Advanced C Programming” spread across a period of three weeks shall be entirely conducted by in-house faculty members of the Department of Information Technology, there details are given below.
+
+</p><p>
+<font color="red">Rishabh Kaushal</font>
+
+He has joined Indira Gandhi Institute of Technology (IGIT) as Assistant Professor in Department of Information Technology since January, 2011.
+
+He did his B.Tech. in Computer Science Engineering from Guru Gobind Singh Indraprastha University, Delhi and M.S. by Research from International Institute of Information Technology (IIIT), Hyderabad.
+
+He has worked in the industry for over 3 years as a key member of Wireless Development Team at TeamF1 Inc. developing wireless based networking products for well known clients such as Cisco, Linksys and Netgear. Besides working in the IT industry, due to his keen interest in teaching, he has also worked as Guest Faculty at Master of Science in Information Technology (MSIT) Division at IIIT, Hyderabad and as freelance Corporate Trainer providing training services to newly inducted employees at Wipro Technologies. Subsequently he moved to academia full time and has worked as Principal Resource Person in Infosys Campus Connect Program. Thereafter, he has worked as a faculty at Computer Science Engineering Department at Thapar University (TU), Patiala and was part of Industry-Academia alliance body.
+
+His areas of interest are programming, problem solving, computer networks and operating systems. Besides this, he has a keen interest to building systems which leverage the technological advancements in effective dissemination of knowledge and its evaluation in engineering disciplines. In view of this, he has built an application for automated evaluation of programming assignments that shall be put to test in the Workshop.
+
+He is the Workshop Coordinator and can be contacted at rishabh.kaushal@gmail.com
+
+</p><p>
+<font color="red">Ankita</font>
+
+She has joined Indira Gandhi Institute of Technology (IGIT) as Assistant Professor in Department of Information Technology since January, 2011.
+
+She did her B.Tech. in Information Technology from University School of Information Technology, Guru Gobind Singh Indraprastha University, Delhi and went on to pursue her M.Tech. in Information Technology from the same School.
+
+She has worked in the industry as a Technical Associate at Tech Mahendra, Pune developing solutions based on various cutting edge technologies. Keeping in view her inclination towards academics, she moved to academia and has worked as a faculty at Amity University (Noida Campus) in the Department of Computer Science Engineering.
+
+Her areas of interest are programming in C, problem solving, software testing and advanced java programming.
+
+
+She is a Key Resource Person in the Workshop and can be contacted at ankitaengg@gmail.com
+
+</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dr. Rishabh Kaushal</p>
+  </footer>
+
+  <!-- Slider Script -->
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(${-index * 100}%)`;
+    }
+    function nextSlide() { showSlide(index + 1); }
+    function prevSlide() { showSlide(index - 1); }
+
+    // Auto-slide every 4 seconds
+    setInterval(nextSlide, 4000);
+  </script>
+</body>
+</html>
+
